@@ -1,0 +1,101 @@
+###############################################################################
+# Build output (todo conteudo de build, restore e diagnostico do .NET)
+###############################################################################
+[Bb]in/
+[Oo]bj/
+publish/
+*.binlog
+*.tlog
+*.cache
+*.lastbuildstate
+*.unsuccessfulbuild
+*.metaproj
+*.metaproj.tmp
+
+###############################################################################
+# Inno Setup output (instaladores compilados — distribuidos via GitHub Release)
+###############################################################################
+Setup/Output/
+
+###############################################################################
+# NuGet (cache global em ~/.nuget/, fora do repo)
+###############################################################################
+*.nupkg
+packages/
+
+###############################################################################
+# Visual Studio / Rider / IDE user-local
+###############################################################################
+.vs/
+*.csproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sln.iml
+.idea/
+
+# ReSharper / Rider caches
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+###############################################################################
+# Claude Code (config/transcripts/state local do AI assistant — NAO compartilhar)
+###############################################################################
+.claude/
+
+###############################################################################
+# VSCode user-local (mantemos launch.json, tasks.json e settings.json genericos)
+###############################################################################
+.vscode/settings.local.json
+.vscode/*.local.*
+.vscode/.ropeproject/
+
+###############################################################################
+# Signing keys / segredos
+###############################################################################
+*.pfx
+*.p12
+*.key
+*.pem
+secrets.json
+appsettings.*.local.json
+
+###############################################################################
+# State local do operador (criado pela aplicacao em runtime — NUNCA versionar)
+###############################################################################
+db_config.txt
+filial.txt
+fila_pendente.txt
+fila_pendente.txt.tmp
+Alocador de Produtos.exe.config
+
+###############################################################################
+# Logs e arquivos temporarios
+###############################################################################
+*.log
+*.tmp
+*.bak
+*.orig
+*.swp
+*~
+
+###############################################################################
+# OS
+###############################################################################
+.DS_Store
+$RECYCLE.BIN/
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+ehthumbs_vista.db
+System Volume Information/
+
+###############################################################################
+# Node (caso futuramente seja adicionado tooling JS)
+###############################################################################
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log

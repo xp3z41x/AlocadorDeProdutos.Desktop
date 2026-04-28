@@ -1,0 +1,91 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/AlocadorDeProdutos.csproj",
+                "-c", "Debug",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build-release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/AlocadorDeProdutos.csproj",
+                "-c", "Release",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish-self-contained",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/AlocadorDeProdutos.csproj",
+                "-c", "Release",
+                "-r", "win-x64",
+                "--self-contained=true",
+                "-p:PublishSingleFile=true",
+                "-p:IncludeNativeLibrariesForSelfExtract=true",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish-for-inno-setup",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/AlocadorDeProdutos.csproj",
+                "-p:PublishProfile=win-x64",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile",
+            "detail": "Publica como pasta self-contained (não single-file). Inno Setup empacota a pasta inteira em bin/Release/net10.0-windows/publish/win-x64/"
+        },
+        {
+            "label": "publish-framework-dependent",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/AlocadorDeProdutos.csproj",
+                "-c", "Release",
+                "-r", "win-x64",
+                "--self-contained=false",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "clean",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "clean",
+                "${workspaceFolder}/AlocadorDeProdutos.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

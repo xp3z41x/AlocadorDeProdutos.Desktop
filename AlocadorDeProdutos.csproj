@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>AlocadorDeProdutos</RootNamespace>
+    <AssemblyName>Alocador de Produtos</AssemblyName>
+    <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+
+    <!-- Build determinístico: mesmos sources → mesmos bytes (CI/CD friendly). -->
+    <Deterministic>true</Deterministic>
+    <DebugType>portable</DebugType>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <SatelliteResourceLanguages>pt-BR;en</SatelliteResourceLanguages>
+
+    <!-- Metadata do assembly (substitui Properties\AssemblyInfo.cs) -->
+    <Product>Alocador de Produtos</Product>
+    <Title>Alocador de Produtos</Title>
+    <Description>Alocação de produtos no estoque do ERP Integra</Description>
+    <Authors>Bernardo Graunke</Authors>
+    <Company>Bernardo Graunke</Company>
+    <Copyright>Copyright (c) 2024-2026 Bernardo Graunke — MIT License</Copyright>
+    <Version>11.0.0.0</Version>
+    <FileVersion>11.0.0.0</FileVersion>
+    <AssemblyVersion>11.0.0.0</AssemblyVersion>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+
+    <!-- Licença MIT (vide arquivo LICENSE na raiz do projeto). -->
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <!-- Suprime CS8002 para refs sem strong name (Npgsql etc.) -->
+    <NoWarn>$(NoWarn);CS8002</NoWarn>
+
+    <!-- Emite arquivos gerados por source generators em disco (obj/Generated/),
+         ajuda o language server do VSCode a reconhecer ApplicationConfiguration
+         e similares sem precisar reiniciar. -->
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>obj/Generated</CompilerGeneratedFilesOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\BMOTOS LOGO.png" />
+  </ItemGroup>
+
+</Project>

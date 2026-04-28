@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlocadorDeProdutos", "AlocadorDeProdutos.csproj", "{9022BB31-C302-410C-B650-68D385F7E3AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9022BB31-C302-410C-B650-68D385F7E3AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9022BB31-C302-410C-B650-68D385F7E3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9022BB31-C302-410C-B650-68D385F7E3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9022BB31-C302-410C-B650-68D385F7E3AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {334C8193-B60B-4CD1-AA5C-923B01AE9A49}
+	EndGlobalSection
+EndGlobal

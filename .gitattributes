@@ -1,0 +1,31 @@
+# Auto-detect: text files são normalizados em LF no repo, CRLF no checkout (Windows).
+* text=auto eol=crlf
+
+# Source code Windows (CRLF)
+*.cs       text eol=crlf
+*.csproj   text eol=crlf
+*.sln      text eol=crlf
+*.resx     text eol=crlf
+*.config   text eol=crlf
+*.manifest text eol=crlf
+
+# Markup
+*.json     text eol=crlf
+*.xml      text eol=crlf
+*.md       text eol=crlf
+
+# Editor configs
+*.editorconfig text eol=crlf
+*.gitattributes text eol=crlf
+*.gitignore     text eol=crlf
+
+# Binary assets (não fazer diff)
+*.ico    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.pdf    binary
+*.pfx    binary
+*.snk    binary
+*.dll    binary
+*.exe    binary
